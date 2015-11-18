@@ -21,5 +21,6 @@ knit        : slidify::knit2slides
 
 ## Slide 2
 
+Basing on Linear Model fit on the cars dataset of the caret library, the Application estimates Car Price according to the selected input Parameters below.
 
-
+---
