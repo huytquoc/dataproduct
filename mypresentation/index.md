@@ -1,6 +1,6 @@
 ---
 title       : Developing Data Products - Course Project
-subtitle    : Car Price Estimation Application
+subtitle    : Car Price Estimation
 author      : Huy Tran
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -20,7 +20,6 @@ knit        : slidify::knit2slides
 --- .class #id 
 
 ## Slide 2
-
 
 
 
