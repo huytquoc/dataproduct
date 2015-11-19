@@ -11,16 +11,63 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Read-And-Delete
+## Contents
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
-
---- .class #id 
-
-## Slide 2
-
-Basing on Linear Model fit on the cars dataset of the caret library, the Application estimates Car Price according to the selected input Parameters below.
+#### 1. Introduction
+#### 2. Cars dataset Overview
+#### 3. Simple Linear Model Overview
+#### 4. Final Linear Model Fit - Price Prediction Summary
+#### 5. Car Price Application
 
 ---
+
+## Introduction
+
+As part of the Developing Data Products - Course Project, I'm developing a Shiny Application - Car Price Estimation. In which, the Prediction Linear Model is fitted basing on the Cars Dataset of "caret" package. 
+
+With the Car Price Estimation App, user can put in values of car features including Mileage, Cylinder, Doors, Leather, Convertible, Hatchback, and Sedan, the App will provide estimated Price for the car basing on the input values.
+
+Note: The model fit and estimation performed in the Application is just for the purpose to show how reactive functions work in Shiny. The model fit, the accuracy is NOT in scope of this Application.
+
+---
+
+## Cars dataset Overview
+
+```{r, echo=FALSE}
+library(caret)
+```
+
+```{r}
+data(cars)
+head(cars, 5)
+```
+
+
+--- 
+## Simple Linear Model Overview
+Reviewing the simple linear model with the Price outcome against the rest of other variables.
+```{r}
+lm.fit <- lm(Price~., data=cars)
+summary(lm.fit)$coefficients
+```
+
+---
+
+## Linear Model Fit Summary
+
+Simply basing on the simple linear model as assessed in the previous Slide, we select the features including Mileage, Cylinder, Doors, Leather, Convertible, Hatchback, and Sedan for the final Model fit. 
+
+```{r}
+lm.fit.final <- lm(Price~Mileage+Cylinder+Doors+Leather+convertible+hatchback+sedan, data=cars)
+summary(lm.fit.final)$coefficients
+```
+
+---
+
+## Car Price Application
+
+The Car Price Application can be accessed via the link: [Car Price Estimation - Shiny App] (https://huytquoc.shinyapps.io/carPriceEstimate)
+
+Please click on the Link provided above to run the Shiny App - Car Price Estimation.
+
+Thank you for watching!
