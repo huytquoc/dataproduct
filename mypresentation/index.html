@@ -80,8 +80,7 @@
     <h2>Cars dataset Overview</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">data(cars)
-head(cars, 5)
+    <pre><code class="r">head(cars, 5)
 </code></pre>
 
 <pre><code>##      Price Mileage Cylinder Doors Cruise Sound Leather Buick Cadillac
@@ -107,11 +106,8 @@ head(cars, 5)
     <h2>Simple Linear Model Overview</h2>
   </hgroup>
   <article data-timings="">
-    <p>Reviewing the simple linear model with the Price outcome against the rest of other variables.</p>
-
-<pre><code class="r">lm.fit &lt;- lm(Price~., data=cars)
-summary(lm.fit)$coefficients
-</code></pre>
+    <p>Reviewing the simple linear model with the Price outcome against the rest of other variables:
+<strong>lm.fit &lt;- lm(Price~., data=cars)</strong></p>
 
 <pre><code>##                  Estimate   Std. Error    t value      Pr(&gt;|t|)
 ## (Intercept) -1124.1964049 992.59079168  -1.132588  2.577314e-01

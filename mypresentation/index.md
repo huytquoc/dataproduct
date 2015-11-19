@@ -36,8 +36,9 @@ Note: The model fit and estimation performed in the Application is just for the 
 
 
 
+
+
 ```r
-data(cars)
 head(cars, 5)
 ```
 
@@ -59,12 +60,9 @@ head(cars, 5)
 
 --- 
 ## Simple Linear Model Overview
-Reviewing the simple linear model with the Price outcome against the rest of other variables.
 
-```r
-lm.fit <- lm(Price~., data=cars)
-summary(lm.fit)$coefficients
-```
+Reviewing the simple linear model with the Price outcome against the rest of other variables:
+__lm.fit <- lm(Price~., data=cars)__
 
 ```
 ##                  Estimate   Std. Error    t value      Pr(>|t|)

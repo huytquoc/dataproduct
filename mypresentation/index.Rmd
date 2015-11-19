@@ -35,20 +35,27 @@ Note: The model fit and estimation performed in the Application is just for the 
 
 ```{r, echo=FALSE}
 library(caret)
+#library(xtable)
+```
+
+```{r, echo=FALSE}
+data(cars)
+lm.fit <- lm(Price~., data=cars)
+x<- summary(lm.fit)$coefficients
 ```
 
 ```{r}
-data(cars)
 head(cars, 5)
 ```
 
 
 --- 
 ## Simple Linear Model Overview
-Reviewing the simple linear model with the Price outcome against the rest of other variables.
-```{r}
-lm.fit <- lm(Price~., data=cars)
-summary(lm.fit)$coefficients
+
+Reviewing the simple linear model with the Price outcome against the rest of other variables:
+__lm.fit <- lm(Price~., data=cars)__
+```{r, echo=FALSE}
+print(x)
 ```
 
 ---
